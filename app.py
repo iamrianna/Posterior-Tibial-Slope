@@ -217,7 +217,7 @@ fig.update_layout(
     scene=dict(
         xaxis=dict(title="Medial - Lateral (X)", visible=show_grid, backgroundcolor="#0d1117", gridcolor="#21262d"),
         yaxis=dict(title="Anterior - Posterior (Y)", visible=show_grid, backgroundcolor="#0d1117", gridcolor="#21262d"),
-[09.10.2026 15:00] #.࣪ 𝚛𝚒𝚊𝚗𝚗𝚊◝☁️: zaxis=dict(title="Superior - Inferior (Z)", visible=show_grid, backgroundcolor="#0d1117", gridcolor="#21262d"),
+zaxis=dict(title="Superior - Inferior (Z)", visible=show_grid, backgroundcolor="#0d1117", gridcolor="#21262d"),
         aspectmode='data',
         camera=dict(eye=dict(x=1.6, y=-1.6, z=0.8)) # Default Sagittal/Oblique view
     ),
