@@ -10,7 +10,7 @@ import trimesh
 # 1. PAGE CONFIGURATION & DARK PACS THEME
 # ==========================================
 st.set_page_config(
-    page_title="3D Orthopedic Workstation | PTS & ACL Analysis",
+    page_title="3D PTS & ACL Analysis",
     page_icon="🦴",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -116,8 +116,8 @@ show_grid = st.sidebar.checkbox("Display Reference Grid", True)
 # ==========================================
 # 4. MAIN WORKSTATION DASHBOARD
 # ==========================================
-st.title("🏥 3D Orthopedic Workstation: Posterior Tibial Slope Engine")
-st.markdown("Quantitative 3D assessment of anatomical tibial slope & anterior cruciate ligament (ACL) strain vectors.")
+st.title("3D Posterior Tibial Slope Engine")
+st.markdown("Quantitative 3D assessment of anatomical tibial slope & anterior cruciate ligament (ACL) strain vectors, made by Rianna-Maria Tanase")
 
 # Top Metric Cards
 col1, col2, col3, col4 = st.columns(4)
