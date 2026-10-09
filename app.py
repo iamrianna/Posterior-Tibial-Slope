@@ -1,3 +1,4 @@
+import os
 import io
 import numpy as np
 import pandas as pd
@@ -107,6 +108,7 @@ elif preset_case == "Severe High Risk (15.5°)":
     pts_angle = 15.5
 else:
     pts_angle = st.sidebar.slider("Posterior Tibial Slope (°):", 0.0, 20.0, 9.5, 0.5)
+
 mesh_opacity = st.sidebar.slider("Bone Opacity:", 0.2, 1.0, 0.85, 0.05)
 show_axes = st.sidebar.checkbox("Display Anatomical Axes (Anterior-Posterior / Z)", True)
 show_grid = st.sidebar.checkbox("Display Reference Grid", True)
@@ -217,7 +219,7 @@ fig.update_layout(
     scene=dict(
         xaxis=dict(title="Medial - Lateral (X)", visible=show_grid, backgroundcolor="#0d1117", gridcolor="#21262d"),
         yaxis=dict(title="Anterior - Posterior (Y)", visible=show_grid, backgroundcolor="#0d1117", gridcolor="#21262d"),
-zaxis=dict(title="Superior - Inferior (Z)", visible=show_grid, backgroundcolor="#0d1117", gridcolor="#21262d"),
+        zaxis=dict(title="Superior - Inferior (Z)", visible=show_grid, backgroundcolor="#0d1117", gridcolor="#21262d"),
         aspectmode='data',
         camera=dict(eye=dict(x=1.6, y=-1.6, z=0.8)) # Default Sagittal/Oblique view
     ),
@@ -259,10 +261,10 @@ with side_col:
         )
         
     st.markdown("---")
-    st.markdown("Biomechanical Force Estimates:")
-    st.write(f"- PTS Angle: {pts_angle}°")
-    st.write(f"- Tibial Slope Plane Drift: {np.tan(np.radians(pts_angle)):.3f} mm/mm")
-    st.write(f"- Relative ACL Graft Load Increase: {max(0, (pts_angle - 8.0) * 12.5):.1f}%")
+    st.markdown("**Biomechanical Force Estimates:**")
+    st.write(f"- **PTS Angle:** `{pts_angle}°`")
+    st.write(f"- **Tibial Slope Plane Drift:** `{np.tan(np.radians(pts_angle)):.3f}` mm/mm")
+    st.write(f"- **Relative ACL Graft Load Increase:** `{max(0, (pts_angle - 8.0) * 12.5):.1f}%`")
     
     st.markdown("---")
     st.download_button(
