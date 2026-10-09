@@ -107,7 +107,7 @@ elif preset_case == "Severe High Risk (15.5°)":
     pts_angle = 15.5
 else:
     pts_angle = st.sidebar.slider("Posterior Tibial Slope (°):", 0.0, 20.0, 9.5, 0.5)
-[09.10.2026 15:00] #.࣪ 𝚛𝚒𝚊𝚗𝚗𝚊◝☁️: mesh_opacity = st.sidebar.slider("Bone Opacity:", 0.2, 1.0, 0.85, 0.05)
+mesh_opacity = st.sidebar.slider("Bone Opacity:", 0.2, 1.0, 0.85, 0.05)
 show_axes = st.sidebar.checkbox("Display Anatomical Axes (Anterior-Posterior / Z)", True)
 show_grid = st.sidebar.checkbox("Display Reference Grid", True)
 
